@@ -16,7 +16,7 @@ class WonderSquare {
         M = sc.nextInt();
         N = sc.nextInt();
         A = new int[M][N];
-        System.out.println("Enter Matrix of " + M + "x" + N + ": ");
+        System.out.println("Enter Matrix of " + M + " by " + N + ": ");
         for (int x = 0; x < M; x++)
             for (int y = 0; y < N; y++)
                 A[x][y] = sc.nextInt();

@@ -12,10 +12,10 @@ class SaddlePoint {
 
     void input() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Order of Matrix(M): ");
+        System.out.print("Enter Order of Square Matrix(M): ");
         M = sc.nextInt();
         A = new int[M][M];
-        System.out.println("Enter Matrix of " + M + "x" + M + ": ");
+        System.out.println("Enter Matrix of " + M + " by " + M + ": ");
         for (int x = 0; x < M; x++)
             for (int y = 0; y < M; y++)
                 A[x][y] = sc.nextInt();

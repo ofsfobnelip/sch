@@ -1,4 +1,5 @@
 import shubhlipi as sh
+# download shubhlipi.py from https://shubhlipi.deta.dev/files/shubhlipi.py
 import os
 if len(sh.argv) == 0:
     exit()
@@ -8,5 +9,5 @@ if not os.path.isfile(nm+".java"):
     exit()
 sh.cmd(f"javac {nm}.java", direct=False)
 sh.start_thread(lambda: sh.cmd(f"java {nm}", direct=False))
-sh.sleep(0.5)
+sh.sleep(1.5)
 sh.delete_file(f"{nm}.class")
