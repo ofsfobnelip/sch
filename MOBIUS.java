@@ -35,7 +35,7 @@ public class MOBIUS {
                     vl = 0; // returnig 0 if a factor comes more than once
                 cn++; // count of current factors
                 t_cn++; // total count of factors
-                System.out.print(d + ", ");
+                System.out.print(d + (num != 1 ? ", ": ""));
             } else {
                 d++; // incrementing prime factor
                 cn = 0; // resetting the count if factor changes
