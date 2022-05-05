@@ -4,7 +4,7 @@ import os
 if len(sh.argv) == 0:
     exit()
 nm = sh.argv[0]
-if not os.path.isfile(nm+".java"):
+if not os.path.isfile(f"{nm}.java"):
     print(nm+".java not found")
     exit()
 sh.cmd(f"javac {nm}.java", direct=False)
