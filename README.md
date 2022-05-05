@@ -18,3 +18,16 @@ Saddle point is where value is **min** in **rows** and **max** in **columns**.
     * The sum of integers in any row or column should add upto in any row or column should add upto
     **0.5*n(n<sup>2</sup>+1)**<br>
 [Here](WonderSquare1.java)
+6. A Smith number is a number in which the sum of digits of a number is equal to sum digits of
+the prime factors(excluding 1) of that number.
+[Here](Smith.java)
+7. A Adam-Prime number is a number in which is both Adam and Prime Number. Adam Number is number 
+in which square of a number and the sqaure of its reverse are reverse to each other.
+[Here](Smith.java)
+8. A Kaprekar number is a number in which the sqaure of the number is split into two parts 
+and the sum of those two parts is equal to number. For e.x- 45<sup>2</sup>=2025 -> 20 + 45 == 45, 
+297<sup>2</sup>=88209 -> 88 + 209 == 297.
+[Here](Kaprekar.java)
+9. In a unique number every digit is distict. Enter a range of **m** to **n** and search for unique 
+numbers.
+[Here](Unique.java)
