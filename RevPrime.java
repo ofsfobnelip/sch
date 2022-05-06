@@ -21,8 +21,8 @@ class RevPrime {
     boolean check(int n) {
         String num = String.valueOf(n);
         int ln = num.length();
-        char first = num.charAt(0), last = num.charAt(ln - 1);
-        if ((first != '3' && first != '9') && (last != '3' && last != '9'))
+        char f = num.charAt(0), l = num.charAt(ln - 1);
+        if (!(f == '3' || f == '9' || l == '3' || l == '9'))
             return false;
         return is_prime(n);
     }
