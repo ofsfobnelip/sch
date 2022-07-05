@@ -14,15 +14,12 @@ class BubbleSort {
     }
 
     int[] sort(int[] arr) {
-        boolean flag = true;
-        while (flag) {
-            flag = false;
-            for (int y = 0; y < arr.length - 1; y++) {
+        for (int x = 0; x < arr.length - 1; x++) {
+            for (int y = 0; y < arr.length - x - 1; y++) {
                 if (arr[y] > arr[y + 1]) {
                     int tmp = arr[y];
                     arr[y] = arr[y + 1];
                     arr[y + 1] = tmp;
-                    flag = true;
                 }
             }
         }
