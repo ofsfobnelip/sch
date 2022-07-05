@@ -28,7 +28,7 @@ class BubbleSort {
 
     int[] merge_array(int[] A, int[] B) {
         int[] arr = new int[A.length + B.length];
-        int i = 0, max = (int) Math.max(A.length, B.length);
+        int i = 0, max = Math.max(A.length, B.length);
         for (int x = 0; x < max; x++) {
             if (x < A.length)
                 arr[i++] = A[x];
