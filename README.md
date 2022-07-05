@@ -36,3 +36,7 @@ Both the integers consits of 3 or 9 at thier either ends.
 11. In a unique number every digit is distict. Enter a range of **m** to **n** and search for unique 
 numbers.
 [Here](Unique.java)
+12. Implementing Selection Sort, for descending order.
+[Here](SelectSort.java)
+13. Implement a BubbleSort to Ascending order.Initialize Array of A and B of ***M*** and ***N***. Sort it Join the Elements Consecutively.
+[Here](BubbleSort.java)
