@@ -1,7 +1,7 @@
 class BubbleSort {
     public static void main(String[] args) {
         BubbleSort a = new BubbleSort();
-        int[] A = { 7885, 32, 124, 52, 89, 686, 678, 642, 6543 };
+        int[] A = { 1, 2, 4, 3, 6 };
         int[] B = { 312, 11, 45, 67, -4, 43 };
         A = a.sort(A);
         System.out.println("Sorted A :");
@@ -14,12 +14,15 @@ class BubbleSort {
     }
 
     int[] sort(int[] arr) {
-        for (int x = 0; x < arr.length - 1; x++) {
+        boolean sorted = false;
+        for (int x = 0; !sorted && x < arr.length - 1; x++) {
+            sorted = true;
             for (int y = 0; y < arr.length - x - 1; y++) {
                 if (arr[y] > arr[y + 1]) {
                     int tmp = arr[y];
                     arr[y] = arr[y + 1];
                     arr[y + 1] = tmp;
+                    sorted = false;
                 }
             }
         }

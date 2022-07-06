@@ -39,12 +39,15 @@ class NumFreq {
     }
 
     int[] sort(int[] arr) {
-        for (int x = 0; x < arr.length - 1; x++) {
+        boolean sorted = false;
+        for (int x = 0; !sorted && x < arr.length - 1; x++) {
+            sorted = true;
             for (int y = 0; y < arr.length - x - 1; y++) {
                 if (arr[y] > arr[y + 1]) {
                     int tmp = arr[y];
                     arr[y] = arr[y + 1];
                     arr[y + 1] = tmp;
+                    sorted = false;
                 }
             }
         }
