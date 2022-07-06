@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-class CentInt {
+class CentInt1 {
     int[] num;
 
     public static void main(String[] args) {
-        CentInt a = new CentInt();
+        CentInt1 a = new CentInt1();
         a.input();
         a.sort(a.num);
         a.display();
@@ -23,27 +23,35 @@ class CentInt {
 
     void display() {
         int len = num.length;
-        // 1st Method, with sufficient memory
-        int[] arr = new int[len];
-        int start = 0, centre = (len - 1) / 2;
-        if (len % 2 == 1) {
-            arr[centre] = num[0];
-            start = 1;
+        // 2nd Method, with limited memory
+        for (int x = 1; x <= (len - 1 + len % 2) / 2; x += 2) {
+            int tmp = num[x];
+            int end_ind = len - x - (1 - len % 2);
+            num[x] = num[end_ind];
+            num[end_ind] = tmp;
         }
-        for (int x = 1; x <= len / 2; x++) {
-            arr[centre + x] = num[start++];
-            arr[centre - x + (1 - len % 2)] = num[start++];
-        }
-        num = arr;
+        int ind = len / 2 + len % 2;
+        sort(num, 0, ind);
+        sort(num, ind, len);
+        reverse(num, 0, ind);
         System.out.println("Output:");
         for (int x = 0; x < len; x++)
             System.out.print(num[x] + " ");
         System.out.println();
     }
 
-    int[] sort(int[] arr) {
-        for (int x = 0; x < arr.length - 1; x++) {
-            for (int y = 0; y < arr.length - x - 1; y++) {
+    int[] reverse(int[] arr, int start, int end) {
+        for (int x = start; x < end / 2; x++) {
+            int tmp = arr[x];
+            arr[x] = arr[end - 1 - x];
+            arr[end - 1 - x] = tmp;
+        }
+        return arr;
+    }
+
+    int[] sort(int[] arr, int start, int end) {
+        for (int x = start; x < end - 1; x++) {
+            for (int y = start; y < end + start - x - 1; y++) {
                 if (arr[y] > arr[y + 1]) {
                     int tmp = arr[y];
                     arr[y] = arr[y + 1];
@@ -52,5 +60,9 @@ class CentInt {
             }
         }
         return arr;
+    }
+
+    int[] sort(int[] arr) {
+        return sort(arr, 0, arr.length);
     }
 }
