@@ -42,3 +42,7 @@ numbers.
 [Here](BubbleSort.java)
 14. Write a program to implement Matric Multiplication.
 [Here](MatrixMul.java)
+15. Number Freequency Counter in an Array.
+[Here](NumFreq.java)
+16. Write a program to accept a set of n integers (where n > 0) in a single dimensional array. Arrange the elements of the array such that the lowest number appears in the centre of the array, next lower number in the right cell of the centre, next lower in the left cell of the centre and so on. The process will stop when the highest number will set in its appropriate cell. Finally, display the array elements. Assume that the memory space is less. Hence, you don't need to create extra array for the aforesaid task.
+[Here](CentInt.java)

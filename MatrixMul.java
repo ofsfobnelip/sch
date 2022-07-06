@@ -41,7 +41,7 @@ class MatrixMul {
     }
 
     void multiply() {
-        System.out.println("Product Matrix :");
+        System.out.println("Product Matrix A x B:");
         C = new int[ind[0][0]][ind[1][1]];
         for (int x = 0; x < ind[0][0]; x++) {
             for (int y = 0; y < ind[1][1]; y++) {
