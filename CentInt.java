@@ -22,9 +22,20 @@ class CentInt {
     }
 
     void display() {
+        int len = num.length;
+        int[] arr = new int[len];
+        int start = 0, centre = (len - 1) / 2;
+        if (len % 2 == 1) {
+            arr[centre] = num[0];
+            start = 1;
+        }
+        for (int x = 1; x <= len / 2; x++) {
+            arr[centre + x] = num[start++];
+            arr[centre - x + (1 - len % 2)] = num[start++];
+        }
         System.out.println("Output:");
-        for (int x = 0; x < num.length; x++)
-            System.out.print(num[x] + (x != num.length - 1 ? ", " : ""));
+        for (int x = 0; x < len; x++)
+            System.out.print(arr[x] + (x != len - 1 ? ", " : ""));
         System.out.println();
     }
 
