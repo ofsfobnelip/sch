@@ -55,3 +55,4 @@ numbers.
 [Here](AddTime.java)
 2. Shift a Matrix up by one row.
 [Here](Shift.java)
+4. Merge two integers. [Here](Merger.java)
