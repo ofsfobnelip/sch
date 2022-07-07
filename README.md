@@ -1,4 +1,4 @@
-## School Questions
+## Assignment 1
 1. Checking saddle point of Matrx MxM.
 Saddle point is where value is **min** in **rows** and **max** in **columns**.
 [Here](SaddlePoint.java)
@@ -36,13 +36,20 @@ Both the integers consits of 3 or 9 at thier either ends.
 11. In a unique number every digit is distict. Enter a range of **m** to **n** and search for unique 
 numbers.
 [Here](Unique.java)
-12. Implementing Selection Sort, for descending order.
+## Methods
+1. Implementing Selection Sort, for descending order.
 [Here](SelectSort.java)
-13. Implement a BubbleSort to Ascending order.Initialize Array of A and B of ***M*** and ***N***. Sort it Join the Elements Consecutively.
+2. Implement a BubbleSort to Ascending order.Initialize Array of A and B of ***M*** and ***N***. Sort it Join the Elements Consecutively.
 [Here](BubbleSort.java)
-14. Write a program to implement Matric Multiplication.
+3. Write a program to implement Matric Multiplication.
 [Here](MatrixMul.java)
-15. Number Freequency Counter in an Array.
+## Assignment 2
+1. Number Freequency Counter in an Array.
 [Here](NumFreq.java)
-16. Write a program to accept a set of n integers (where n > 0) in a single dimensional array. Arrange the elements of the array such that the lowest number appears in the centre of the array, next lower number in the right cell of the centre, next lower in the left cell of the centre and so on. The process will stop when the highest number will set in its appropriate cell. Finally, display the array elements. Assume that the memory space is less. Hence, you don't need to create extra array for the aforesaid task.
-[Here](CentInt.java)
+2. Write a program to accept a set of n integers (where n > 0) in a single dimensional array. Arrange the elements of the array such that the lowest number appears in the centre of the array, next lower number in the right cell of the centre, next lower in the left cell of the centre and so on. The process will stop when the highest number will set in its appropriate cell. Finally, display the array elements. Assume that the memory space is less. Hence, you don't need to create extra array for the aforesaid task.
+[Here](CentInt.java) [Here (1)](CentInt1.java)
+## Assignment 3
+1. Check for equality of two matrices.
+[Here](EqMat.java)
+2. Adding Time
+[Here](AddTime.java)
