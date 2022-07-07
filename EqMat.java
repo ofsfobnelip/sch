@@ -16,7 +16,6 @@ class EqMat {
         for (int x = 0; x < m; x++)
             for (int y = 0; y < n; y++)
                 A[x][y] = sc.nextInt();
-        sc.close();
     }
 
     int check(EqMat P, EqMat Q) {
@@ -38,13 +37,17 @@ class EqMat {
     }
 
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter m,n for Matrix 1: ");
         EqMat a = new EqMat(sc.nextInt(), sc.nextInt());
         System.out.print("Enter m,n for Matrix 2: ");
         EqMat b = new EqMat(sc.nextInt(), sc.nextInt());
         a.readArray();
+        System.out.println("Entered Array:-");
+        a.print();
         b.readArray();
+        System.out.println("Entered Array:-");
+        b.print();
         System.out.println("Matrices are " + (a.check(a, b) == 1 ? "" : "not ") + "equal");
         sc.close();
     }

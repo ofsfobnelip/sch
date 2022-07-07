@@ -14,15 +14,14 @@ class AddTime {
         A[0] = sc.nextInt();
         System.out.print("Enter Minutes: ");
         A[1] = sc.nextInt();
-        sc.close();
     }
 
     void addtime(AddTime a, AddTime b) {
         int t1 = a.A[0] * 60 + a.A[1];
         int t2 = b.A[0] * 60 + b.A[1];
         int t = t1 + t2;
-        A[0] = t % 60;
-        A[1] = t / 60;
+        A[0] = t / 60; // hours
+        A[1] = t % 60; // minutes
     }
 
     void disptime() {
