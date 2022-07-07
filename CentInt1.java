@@ -23,14 +23,15 @@ class CentInt1 {
 
     void display() {
         int len = num.length;
+        int len2 = len % 2;
         // 2nd Method, with limited memory
-        for (int x = 1; x <= (len - 1 + len % 2) / 2; x += 2) {
+        for (int x = 1; x <= (len - 1 + len2) / 2; x += 2) {
             int tmp = num[x];
-            int end_ind = len - x - (1 - len % 2);
+            int end_ind = len - x - 1 + len2;
             num[x] = num[end_ind];
             num[end_ind] = tmp;
         }
-        int ind = len / 2 + len % 2;
+        int ind = len / 2 + len2;
         sort(num, 0, ind);
         sort(num, ind, len);
         reverse(num, 0, ind);
