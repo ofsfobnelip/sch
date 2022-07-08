@@ -59,5 +59,9 @@ numbers.
 [Here](Merger.java)
 5. Merge Two Sorted Integer Arrays.
 [Here](Mixer.java)
+6. Matrix Subtraction.
+[Here](MatrixSub.java)
+7. Merge Two Integer Arrays and then Sort the combined Array.
+[Here](Combine.java)
 8. Reverse numeral elements of a Matrix.
 [Here](MatRev.java)
