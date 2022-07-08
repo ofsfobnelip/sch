@@ -53,6 +53,11 @@ numbers.
 [Here](EqMat.java)
 2. Adding Time.
 [Here](AddTime.java)
-2. Shift a Matrix up by one row.
+3. Shift a Matrix up by one row.
 [Here](Shift.java)
-4. Merge two integers. [Here](Merger.java)
+4. Merge two integers.
+[Here](Merger.java)
+5. Merge Two Sorted Integer Arrays.
+[Here](Mixer.java)
+8. Reverse numeral elements of a Matrix.
+[Here](MatRev.java)
