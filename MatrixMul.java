@@ -1,64 +1,58 @@
 import java.util.Scanner;
 
 class MatrixMul {
-    int[][] A, B, C;
-    int[][] ind = { { 0, 0 }, { 0, 0 } };
+    int[][] arr;
+    int m, n;
 
-    public static void main(String[] args) {
-        MatrixMul a = new MatrixMul();
-        a.input();
-        a.multiply();
-        a.print_matrix(a.C);
+    MatrixMul(int m1, int n1) {
+        m = m1;
+        n = n1;
+        arr = new int[m][n];
     }
 
     void input() {
         Scanner sc = new Scanner(System.in);
-        for (int x = 0; x < 2; x++) {
-            System.out.print("Enter Row, Column for  Matrix " + (x + 1) + " = ");
-            ind[x][0] = sc.nextInt();
-            ind[x][1] = sc.nextInt();
-            if (x == 0)
-                A = new int[ind[x][0]][ind[x][1]];
-            else if (x == 1)
-                B = new int[ind[x][0]][ind[x][1]];
-        }
-        if (ind[0][1] != ind[1][0]) {
-            System.out.println("Matrix Multiplaication not applicable");
-            System.exit(0);
-        }
-        for (int x = 0; x < 2; x++) {
-            System.out.println("Enter Elements of Matrix " + (x + 1) + " :");
-            for (int i = 0; i < ind[x][0]; i++) {
-                for (int j = 0; j < ind[x][1]; j++) {
-                    if (x == 0)
-                        A[i][j] = sc.nextInt();
-                    else if (x == 1)
-                        B[i][j] = sc.nextInt();
-                }
-            }
-        }
-        sc.close();
+        System.out.println("Enter Matrx of " + m + " x " + n + " = ");
+        for (int x = 0; x < m; x++)
+            for (int y = 0; y < n; y++)
+                arr[x][y] = sc.nextInt();
     }
 
-    void multiply() {
-        System.out.println("Product Matrix A x B:");
-        C = new int[ind[0][0]][ind[1][1]];
-        for (int x = 0; x < ind[0][0]; x++) {
-            for (int y = 0; y < ind[1][1]; y++) {
+    MatrixMul multiply(MatrixMul A) {
+        if (n != A.m) {
+            System.out.println("MAtrix Multiplicaton not applicable");
+            System.exit(-1);
+        }
+        MatrixMul B = new MatrixMul(m, A.n);
+        for (int x = 0; x < m; x++)
+            for (int y = 0; y < A.n; y++) {
                 int sum = 0;
-                for (int i = 0; i < ind[0][1]; i++) {
-                    sum += A[x][i] * B[i][y];
-                }
-                C[x][y] = sum;
+                for (int i = 0; i < n; i++)
+                    sum += arr[x][i] * A.arr[i][y];
+                B.arr[x][y] = sum;
             }
-        }
+        return B;
     }
 
-    void print_matrix(int[][] arr) {
+    void print() {
         for (int x = 0; x < arr.length; x++) {
             for (int y = 0; y < arr[0].length; y++)
                 System.out.print(arr[x][y] + "\t");
             System.out.println();
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter m,n of the Matrix 1: ");
+        MatrixMul a = new MatrixMul(sc.nextInt(), sc.nextInt());
+        a.input();
+        System.out.print("Enter m,n of the Matrix 2: ");
+        MatrixMul b = new MatrixMul(sc.nextInt(), sc.nextInt());
+        b.input();
+        MatrixMul C = a.multiply(b);
+        System.out.println("Multiplied Matrix: ");
+        C.print();
+        sc.close();
     }
 }
