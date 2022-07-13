@@ -1,4 +1,4 @@
-## Assignment 1
+## Assignment
 1. Checking saddle point of Matrx MxM.
 Saddle point is where value is **min** in **rows** and **max** in **columns**.
 [Here](SaddlePoint.java)
@@ -43,12 +43,12 @@ numbers.
 [Here](BubbleSort.java)
 3. Write a program to implement Matric Multiplication.
 [Here](MatrixMul.java)
-## Assignment 2
+## Arrays ISC
 1. Number Freequency Counter in an Array.
 [Here](NumFreq.java)
 2. Write a program to accept a set of n integers (where n > 0) in a single dimensional array. Arrange the elements of the array such that the lowest number appears in the centre of the array, next lower number in the right cell of the centre, next lower in the left cell of the centre and so on. The process will stop when the highest number will set in its appropriate cell. Finally, display the array elements. Assume that the memory space is less. Hence, you don't need to create extra array for the aforesaid task.
-[Here](CentInt.java) [Here (1)](CentInt1.java)
-## Assignment 3
+[Here](CentInt.java) and also [Here](CentInt1.java)
+## Array objects as passes Parameters
 1. Check for equality of two matrices.
 [Here](EqMat.java)
 2. Adding Time.
@@ -65,3 +65,6 @@ numbers.
 [Here](Combine.java)
 8. Reverse numeral elements of a Matrix.
 [Here](MatRev.java)
+## ISC String Manipulation
+1. A class Rearrange has been defined to modify a word by bringing all the vowels in the word
+at the beginning followed by the consonants.
