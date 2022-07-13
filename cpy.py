@@ -1,4 +1,5 @@
 import shubhlipi as sh
+import markdown
 import os
 if len(sh.argv) == 0:
     print("Specify Drive letter")
@@ -14,3 +15,4 @@ for x in os.listdir("./"):
     if x in [".git"]:
         continue
     sh.copy_file(x, lc+f"\\{x}")
+sh.write(lc+"\\README.html", markdown.markdown(sh.read("README.md")))
