@@ -3,7 +3,6 @@ import java.util.*;
 class VowelShift {
     String wrd, newwrd;
     int vow_cn = 0, con_cn = 0;
-    char[] vow = { 'a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U' };
 
     VowelShift() {
     }
@@ -11,13 +10,13 @@ class VowelShift {
     void readword() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the word: ");
-        wrd = sc.next();
+        wrd = sc.next().toUpperCase();
         sc.close();
     }
 
     void freq_vow_con() {
         for (int x = 0; x < wrd.length(); x++)
-            if (is_there(vow, wrd.charAt(x)))
+            if (is_vowel(wrd.charAt(x)))
                 vow_cn++;
             else
                 con_cn++;
@@ -26,17 +25,16 @@ class VowelShift {
     }
 
     void arrange() {
-        StringBuffer vw = new StringBuffer("");// vowels
-        StringBuffer con = new StringBuffer("");// consonant
+        StringBuffer vw = new StringBuffer(""); // vowels
+        StringBuffer con = new StringBuffer(""); // consonant
         for (int x = 0; x < wrd.length(); x++) {
             char c = wrd.charAt(x);
-            if (is_there(vow, c))
+            if (is_vowel(c))
                 vw.append(c);
             else
                 con.append(c);
-
         }
-        newwrd = String.valueOf(vw) + String.valueOf(con);
+        newwrd = vw.toString() + con.toString();
     }
 
     void display() {
@@ -44,9 +42,10 @@ class VowelShift {
         System.out.println("Rearranged Word: " + newwrd);
     }
 
-    boolean is_there(char[] a, char val) {
-        for (int x = 0; x < a.length; x++)
-            if (val == a[x])
+    boolean is_vowel(char val) {
+        char[] v = { 'A', 'E', 'I', 'O', 'U' };
+        for (int x = 0; x < v.length; x++)
+            if (val == v[x])
                 return true;
         return false;
     }

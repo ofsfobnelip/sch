@@ -16,3 +16,4 @@ for x in os.listdir("./"):
         continue
     sh.copy_file(x, lc+f"\\{x}")
 sh.write(lc+"\\README.html", markdown.markdown(sh.read("README.md")))
+print("Succesfully Copuied")
