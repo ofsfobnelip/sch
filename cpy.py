@@ -7,7 +7,7 @@ if len(sh.argv) == 0:
 elif len(sh.argv[0]) != 1:
     print("Invalid Drive letter")
     exit(-1)
-lc = f'{sh.argv[0]}:\\जावानुपानिप्रयोगानि'
+lc = f'{sh.argv[0]}:\\जावोपानुप्रयोगानि'
 sh.delete_folder(lc)
 sh.makedir(lc)
 frm = sh.parent(__file__)

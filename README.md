@@ -68,3 +68,4 @@ numbers.
 ## ISC String Manipulation
 1. A class Rearrange has been defined to modify a word by bringing all the vowels in the word
 at the beginning followed by the consonants.
+[Here](VowelShift.java)
