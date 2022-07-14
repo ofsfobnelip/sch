@@ -46,5 +46,6 @@ class Shift {
         a.input();
         a.cyclic(a);
         a.display();
+        sc.close();
     }
 }

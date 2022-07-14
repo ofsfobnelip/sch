@@ -73,3 +73,11 @@ at the beginning followed by the consonants.
 [Here](./Capital.java)
 3. A class **SwapSort** to swap first and last characters of a word, and to sort the alphabets.
 [Here](./SwapSort.java)
+4. Shift all the Consonants to the right of the word and capitalize the shifted consonants.
+[Here](./ConsShift.java)
+5. Enter a String with max 100 and count the nunber of words and consonats.
+[Here](./TheString.java)
+6. Print String **Fibonacci Series**.
+[Here](./StrFib.java)
+7. Exchange the first and last letters of words in a sentence.
+[Here](./Exchange.java)
