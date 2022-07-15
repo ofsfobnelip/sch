@@ -20,7 +20,7 @@ public class TheString {
         while (st.hasMoreTokens()) {
             String s = st.nextToken();
             for (int x = 0; x < s.length(); x++)
-                if (!is_vowel(s.charAt(x)))
+                if (is_cons(s.charAt(x)))
                     cons++;
         }
     }
@@ -31,9 +31,11 @@ public class TheString {
         System.out.println("Consonant Count: " + cons);
     }
 
-    boolean is_vowel(char val) {
-        val = Character.toUpperCase(val);
-        char[] v = { 'A', 'E', 'I', 'O', 'U' };
+    boolean is_cons(char val) {
+        if (!Character.isLetter(val))
+            return false;
+        char[] v = { 'a', 'e', 'i', 'o', 'u' };
+        val = Character.toLowerCase(val);
         for (int x = 0; x < v.length; x++)
             if (val == v[x])
                 return true;

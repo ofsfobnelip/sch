@@ -11,17 +11,17 @@ class ConsShift {
     }
 
     void shiftcosn() {
-        StringBuffer vw = new StringBuffer();
         StringBuffer cn = new StringBuffer();
+        StringBuffer oth = new StringBuffer();
         for (int x = 0; x < wrd.length(); x++) {
             char c = wrd.charAt(x);
-            if (is_vowel(c))
-                vw.append(c);
-            else
+            if (is_cons(c))
                 cn.append(c);
+            else
+                oth.append(c);
         }
-        shift_wrd = cn.toString() + vw.toString();
-        upper_wrd = cn.toString().toUpperCase() + vw.toString();
+        shift_wrd = cn.toString() + oth.toString();
+        upper_wrd = cn.toString().toUpperCase() + oth.toString();
     }
 
     void display() {
@@ -30,8 +30,11 @@ class ConsShift {
         System.out.println("Changed Word: " + upper_wrd);
     }
 
-    boolean is_vowel(char val) {
+    boolean is_cons(char val) {
+        if (!Character.isLetter(val))
+            return false;
         char[] v = { 'a', 'e', 'i', 'o', 'u' };
+        val = Character.toLowerCase(val);
         for (int x = 0; x < v.length; x++)
             if (val == v[x])
                 return true;

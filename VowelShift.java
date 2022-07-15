@@ -26,15 +26,15 @@ class VowelShift {
 
     void arrange() {
         StringBuffer vw = new StringBuffer(""); // vowels
-        StringBuffer con = new StringBuffer(""); // consonant
+        StringBuffer oth = new StringBuffer(""); // consonant
         for (int x = 0; x < wrd.length(); x++) {
             char c = wrd.charAt(x);
             if (is_vowel(c))
                 vw.append(c);
             else
-                con.append(c);
+                oth.append(c);
         }
-        newwrd = vw.toString() + con.toString();
+        newwrd = vw.toString() + oth.toString();
     }
 
     void display() {
@@ -43,7 +43,10 @@ class VowelShift {
     }
 
     boolean is_vowel(char val) {
+        if (!Character.isLetter(val))
+            return false;
         char[] v = { 'A', 'E', 'I', 'O', 'U' };
+        val=Character.toUpperCase(val);
         for (int x = 0; x < v.length; x++)
             if (val == v[x])
                 return true;

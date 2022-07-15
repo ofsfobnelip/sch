@@ -11,17 +11,10 @@ public class Capital {
         sc.close();
     }
 
-    boolean isCap(String s) {
-        char c = s.charAt(0);
-        if (c >= 'A' && c <= 'Z')
-            return true;
-        return false;
-    }
-
     void display() {
-        StringTokenizer st = new StringTokenizer(sent, " ");
+        StringTokenizer st = new StringTokenizer(sent, " .");
         while (st.hasMoreTokens())
-            if (isCap(st.nextToken()))
+            if (Character.isUpperCase(st.nextToken().charAt(0)))
                 freq++;
         System.out.println("Sentence: " + sent);
         System.out.println("Freequency: " + freq);
