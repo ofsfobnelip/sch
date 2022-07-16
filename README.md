@@ -1,3 +1,8 @@
+* [Assignment](#assignment)
+* [Methods](#methods)
+* [Arrays Questions](#arrays-isc)
+* **[Array Objects as parameters](#array-objects-as-passes-parameters)**
+* **[String Manipulation](#isc-string-manipulation)**
 ## Assignment
 1. Checking saddle point of Matrx MxM.
 Saddle point is where value is **min** in **rows** and **max** in **columns**.
@@ -48,6 +53,18 @@ numbers.
 [Here](./NumFreq.java)
 2. Write a program to accept a set of n integers (where n > 0) in a single dimensional array. Arrange the elements of the array such that the lowest number appears in the centre of the array, next lower number in the right cell of the centre, next lower in the left cell of the centre and so on. The process will stop when the highest number will set in its appropriate cell. Finally, display the array elements. Assume that the memory space is less. Hence, you don't need to create extra array for the aforesaid task.
 [Here](./CentInt.java) and also [Here](./CentInt1.java)
+3. A bank intends to design a program to display the denomination of an input amount, up to 5 digits. The available denomination with the bank are of rupees 2000, 500, 200, 100, 50, 20, 10 and 1.[Here](./Bank.java)
+4. The encryption of letters are to be done as follows:
+A = 1
+B = 2
+C = 3 . . .
+Z = 26
+The potential of a word is found by adding the encrypted value of the letters.
+Example: KITE
+Potential = 11 + 9 + 20 + 5 = 45
+Accept a sentence which is terminated by either " . " , " ? " or " ! ". Each word of sentence is separated by single space. Decode the words according to their potential and arrange them in   increasing order of their potential. Output the result in the format given below:
+5. A company manufactures packing cartons in four sizes, i.e. cartons to accommodate 6 boxes, 12 boxes, 24 boxes and 48 boxes. Design a program to accept the number of boxes to be packed (N) by the user (maximum up to 1000 boxes) and display the break-up of the cartons used in descending order of capacity (i.e. preference should be given to the highest capacity available, and if boxes left are less than 6, an extra carton of capacity 6 should be used.)
+[Here](./Boxes.java)
 ## Array objects as passes Parameters
 1. Check for equality of two matrices.
 [Here](./EqMat.java)
