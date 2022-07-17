@@ -14,5 +14,6 @@ for x in inner:
     for y in all:
         nm = y[3:-1]
         p = sh.read(nm)
-        sh.write(f'{i}\\{nm}',p)
+        sh.write(f'{i}\\{nm}', p)
         sh.delete_file(nm)
+        f=f.replace(y,f'(.{i}/{nm})')
