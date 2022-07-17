@@ -16,4 +16,5 @@ for x in inner:
         p = sh.read(nm)
         sh.write(f'{i}\\{nm}', p)
         sh.delete_file(nm)
-        f=f.replace(y,f'(.{i}/{nm})')
+        f=f.replace(y,f'(./{i}/{nm})')
+sh.write('README.md',f)
