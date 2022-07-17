@@ -8,6 +8,8 @@ if not os.path.isfile(f"{nm}.java"):
     print(nm+".java not found")
     exit()
 sh.cmd(f"javac {nm}.java", direct=False)
-sh.start_thread(lambda: sh.cmd(f"java {nm}", direct=False))
+pth = nm.split('/')
+sh.start_thread(lambda: sh.cmd(
+    f"cd {'/'.join(pth[:-1])}\njava {pth[-1]}", file=True))
 sh.sleep(1.5)
 sh.delete_file(f"{nm}.class")

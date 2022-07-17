@@ -14,7 +14,10 @@ frm = sh.parent(__file__)
 for x in os.listdir("./"):
     if x[-6:] == ".class" or x in [".git"]:
         continue
-    sh.copy_file(x, lc+f"\\{x}")
+    if os.path.isfile(x):
+        sh.copy_file(x, lc+f"\\{x}")
+    elif os.path.isdir(x):
+        sh.copy_folder(x, lc+f"\\{x}")
 sh.write(lc+"\\README.html", markdown.markdown(sh.read("README.md")))
 print("Succesfully Copied")
 
