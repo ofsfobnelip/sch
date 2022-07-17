@@ -28,7 +28,7 @@ the prime factors(excluding 1) of that number.
 [Here](./Smith.java)
 7. A Adam-Prime number is a number in which is both Adam and Prime Number. Adam Number is number 
 in which square of a number and the sqaure of its reverse are reverse to each other.
-[Here](./Smith.java)
+[Here](./AdamPrime.java)
 8. A Kaprekar number is a number in which the sqaure of the number is split into two parts 
 and the sum of those two parts is equal to number. For e.x- 45<sup>2</sup>=2025 -> 20 + 45 == 45, 
 297<sup>2</sup>=88209 -> 88 + 209 == 297.
