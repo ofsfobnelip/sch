@@ -1,8 +1,8 @@
 * [Assignment](#assignment)
 * [Methods](#methods)
-* [Arrays Questions](#arrays-isc)
-* **[Array Objects as parameters](#array-objects-as-passes-parameters)**
-* **[String Manipulation](#isc-string-manipulation)**
+* **[Arrays Questions](#arrays-isc)**
+* *[Array Objects as parameters](#array-objects-as-passes-parameters)*
+* *[String Manipulation](#isc-string-manipulation)*
 ## Assignment
 1. Checking saddle point of Matrx MxM.
 Saddle point is where value is **min** in **rows** and **max** in **columns**.
