@@ -3,6 +3,7 @@
 * **[Arrays Questions](#arrays-isc)**
 * *[Array Objects as parameters](#array-objects-as-passes-parameters)*
 * *[String Manipulation](#isc-string-manipulation)*
+* [Output](#output)
 ## Assignment
 1. Checking saddle point of Matrx MxM.
 Saddle point is where value is **min** in **rows** and **max** in **columns**.
@@ -99,3 +100,5 @@ at the beginning followed by the consonants.
 [Here](./5/StrFib.java)
 7. Exchange the first and last letters of words in a sentence.
 [Here](./5/Exchange.java)
+## Output
+1. [Here](./6/Str.java)
