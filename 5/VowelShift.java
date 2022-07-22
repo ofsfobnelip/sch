@@ -43,14 +43,8 @@ class VowelShift {
     }
 
     boolean is_vowel(char val) {
-        if (!Character.isLetter(val))
-            return false;
-        char[] v = { 'A', 'E', 'I', 'O', 'U' };
-        val=Character.toUpperCase(val);
-        for (int x = 0; x < v.length; x++)
-            if (val == v[x])
-                return true;
-        return false;
+        String vw = "AEIOU";
+        return vw.indexOf(val) != -1;
     }
 
     public static void main(String[] args) {
